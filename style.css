@@ -37,10 +37,6 @@ img {
   height: auto;
 }
 
-.logo{
-  max-height: 10%;
-}
-
 /* Typography */
 
 h1 {
@@ -104,6 +100,40 @@ p {margin-bottom: 1em;}
 
 /* Hero */
 
+.branding-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+  align-items: center;
+}
+
+.logo {
+  width: 3em;
+}
+
+.hero-headline-wrapper {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 4em 8em;
+  text-align: center;
+}
+
+.hero-headline {
+  font-size: 3em;
+}
+
+.footer-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+/* Hero */
+
 .hero {
   min-height: 100vh;
   display: flex;
@@ -114,8 +144,13 @@ p {margin-bottom: 1em;}
 }
 
 @keyframes bg-animation {
-  0% {background-position: 0%;}
-  100% {background-position: 100%;}
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 100%;
+  }
 }
 
 
