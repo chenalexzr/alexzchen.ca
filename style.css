@@ -178,7 +178,7 @@ p {margin-bottom: 1em;}
   height: 40vh;
   position: -webkit-sticky;
   position: sticky;
-  top: 15vh;
+  top: 5vh;
   color: white;
   background: orangered;
   padding: 1em;
