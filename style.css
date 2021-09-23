@@ -163,3 +163,42 @@ p {margin-bottom: 1em;}
   text-align: center;
 }
 
+
+/* Project Page */
+
+.project-wrapper {
+  display: flex;
+  justify-content: space-between;
+  background: black;
+  padding: 1em;
+}
+
+.project-aside {
+  width: 35vw;
+  height: 40vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5vh;
+  color: white;
+  background: orangered;
+  padding: 1em;
+}
+
+.project-navigation {
+  display: flex;
+  flex-direction: row;
+}
+
+.arrow {
+  padding-right: 1em;
+}
+
+.project-details {
+  width: 60vw;
+  min-height: 800vh;
+  background-image: linear-gradient(-225deg,
+      #ff057c 0%,
+      #8d0b93 50%,
+      #321575 100%);
+  padding: 1em;
+}
