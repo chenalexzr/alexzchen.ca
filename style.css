@@ -37,6 +37,9 @@ img {
   height: auto;
 }
 
+.logo{
+  max-height: 10%;
+}
 
 /* Typography */
 
