@@ -16,75 +16,101 @@
 
   <section class="hero">
     <header class="hero-header">
-      <ul class="branding-navigation">
-        <li><a href="index.html">Work</a></li>
-        <li class="logo"><a href="index.html"><img src="alex-chen-personal-brand-digital-logo.svg" /></a></li>      
-        <li><a href="index.html">About</a></li>
-      </ul>
+      <!---Top Navigation-->  
+      <div class="branding-navigation">   
+        <a href="index.html" class="logo"><img src="alex-chen-personal-brand-digital-logo.svg" /></a>
+        <div class="topnav" id="myTopnav">  
+          <a href="index.html">Work</a>
+          <a href="index.html">About</a>
+        </div>
+      </div>
+      </div>
+
     </header>
-  <div class="hero-headline-wrapper">
-    <h1 class="hero-headline">Welcome to my portfolio website.</h1>
-    </div>
-    <footer class="hero-footer">
-      <ul class="footer-navigation">
-        <li><a href="https://www.instagram.com/natttsume/">Instagram</a></li>
-        <li><a href="chenalexzr@gmail.com">chenalexzr@gmail.com</a></li>
-      </ul>
-    </footer>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
   </section>
   
   <main class="work-wrapper">
     <section class="portfolio">
       <ul class="grid">
-        <li>
-          <a href="project-1.html"><figure>
-            <img src="alex-chen-ganyu-genshin-impact-digital-illustration.jpg" alt="">
-          </figure></a>
-        </li>
+<!-- First Row of Masonary--> 
+          <div class="column">
+            <li>
+            <a href="project-1.html"><figure>
+              <img src="alex-chen-ganyu-genshin-impact-digital-illustration.jpg" alt="">
+            </figure></a>
+          </li>
+
+          <li>
+            <figure>
+              <img src="alex-chen-gondola-driver-digital-illustration.jpg" alt="">
+            </figure>
+          </li>
+
+          <li>
+            <figure>
+              <img src="alex-chen-releaf-branding-mugs-mockup.jpg" alt="">
+            </figure>
+          </li>
+        </div>
+<!-- Second Row of Masonary--> 
+        <div class="column">
         <li>
           <figure>
             <img src="alex-chen-gondola-driver-digital-illustration.jpg" alt="">
           </figure>
         </li>
+
         <li>
           <figure>
             <img src="alex-chen-releaf-branding-mugs-mockup.jpg" alt="">
           </figure>
         </li>
+
         <li>
           <a href="project-1.html"><figure>
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/316293/pawel-czerwinski.jpg" alt="">
+            <img src="alex-chen-ganyu-genshin-impact-digital-illustration.jpg" alt="">
           </figure></a>
         </li>
+      </div>
+
+<!-- Third Row of Masonary--> 
+      <div class="column">
         <li>
           <figure>
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/316293/computer.jpg" alt="">
+            <img src="alex-chen-releaf-branding-mugs-mockup.jpg" alt="">
           </figure>
         </li>
+        
         <li>
-          <a href="project-1.html"><figure>
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/316293/pawel-czerwinski.jpg" alt="">
-          </figure></a>
-        </li>
-        <li>
-          <figure>
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/316293/computer.jpg" alt="">
-          </figure>
-        </li>
-        <li>
-          <a href="project-1.html"><figure>
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/316293/pawel-czerwinski.jpg" alt="">
-          </figure></a>
-        </li>
-        <li>
-          <figure>
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/316293/computer.jpg" alt="">
-          </figure>
-        </li>
-      </ul>
+        <a href="project-1.html"><figure>
+          <img src="alex-chen-ganyu-genshin-impact-digital-illustration.jpg" alt="">
+        </figure></a>
+      </li>
+
+      <li>
+        <figure>
+          <img src="alex-chen-gondola-driver-digital-illustration.jpg" alt="">
+        </figure>
+      </li>
+      </div>
+
+<!-- End of Masonary-->     
+    </ul>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="main-footer">
     <div class="container">
       <div class="About">
