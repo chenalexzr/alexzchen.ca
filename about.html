@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Creative Portfolio 2022</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <script src="https://kit.fontawesome.com/d300c2ea15.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+
+  <section>
+    <header class="hero-header">
+      <!---Top Navigation-->  
+      <div class="branding-navigation"> 
+        <a href="index.html"><h1 style>ALEX CHEN</h1></a>  
+        <div class="topnav" id="myTopnav"> 
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          <a href="about.html">About</a>
+          <a href="index.html">Work</a>
+          <a href="index.html">Twitter</a>
+          <a href="index.html">Behance</a>
+          <a href="index.html">Instagram</a>
+          </a>
+        </div>
+      </div>
+      </div>
+
+    </header>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
+  </section>
+  
+  <main class="work-wrapper">
+    <section class="portfolio">
+
+      <div class="container">
+
+          <div class="portrait-image">
+            <img src="alex-chen-portrait-photo.jpg" alt="">
+          </div>
+          
+          <div class="biography">
+            <p>Alex Chen is a freelance Illustrator and Designer based in Vancouver, British Columbia.</p>
+            <p> Brimming with curiosity and a love for painting, you can always expect to see him working on a brand new project to satisfy his drawing mind.</p>
+          </div>
+          
+          <div class="work-history">
+            <h2>Work</h2>
+            <br>
+            <li> Freelance Illustration (2018 - Current)</li>
+            <li> Project CERIS Illustration (2018)</li>
+            <li> Fanzine Illustrations (2019-2021)</li>
+            <li> Virtual Avatar Illustration Internship (2021)</li>
+          </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-credit">
+      <p><a href="#top">Smooth scroll to the top</a></p>
+      <p>&copy; 2021. Made with ❤ and CSS Grid.</p> 
+    </div>
+    
+
+  </div>
+
+</footer>
+
+
+</body>
+</html>
