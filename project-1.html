@@ -1,70 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - CSS Position Sticky &amp; CSS Smooth Scroll</title>
+  <title>Simple Creative Portfolio 2022</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <script src="https://kit.fontawesome.com/d300c2ea15.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./style.css">
-
+<link rel="stylesheet" href="./style.css">
 
 </head>
 
 <body>
-  <header class="hero-header">
-    <ul class="branding-navigation">
-      <li><a href="index.html">Work</a></li>
-      <li class="logo"><a href="index.html"><img src="alex-chen-personal-brand-digital-logo.svg" /></a></li>
-      <li><a href="index.html">About</a></li>
-    </ul>
-  </header>
+
+
+  <section>
+    <header class="hero-header">
+      <!---Top Navigation-->  
+      <div class="branding-navigation"> 
+        <a href="index.html"><h1 style>ALEX CHEN</h1></a>  
+        <div class="topnav" id="myTopnav"> 
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          <a href="about.html">About</a>
+          <a href="index.html">Work</a>
+          <a href="https://twitter.com/natttsume"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.behance.net/alexchen21"><i class="fab fa-behance-square"></i></a>
+          <a href="https://www.instagram.com/natttsume/"><i class="fab fa-instagram"></i></a>
+          </a>
+        </div>
+      </div>
+      </div>
+
+    </header>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
+  </section>
+
   <div class="project-wrapper">
-    <aside class="project-aside">
+    <div class="project-navigation">
+      <div class="arrow"><a href="#"><i class="fas fa-arrow-left"></i></a></div>
+      <div class="arrow"><a href="#"><i class="fas fa-arrow-right"></i></a></div>
+    </div>
+    <div class="project-aside">
       <h1>Genshin Impact Tribute</h1>
-      <p style="line-height: 110%;">Genshin Impact is an action role-playing game developed and published by Chinese video game development and animation studio miHoYo.</p>
-      <p style="line-height: 110%;">The following paintings listed here are personal studies conducted using characters from Genshin Impact as a fun exercise </p>
-      <br>
-      <br>
-      <ul class="project-navigation">
-        <li class="arrow"><a href="#"><i class="fas fa-arrow-left"></i></a></li>
-        <li class="arrow"><a href="#"><i class="fas fa-arrow-right"></i></a></li>
-      </ul>
-    </aside>
-    <main class="project-details">
-      <img src="alex-chen-ganyu-genshin-impact-digital-illustration.jpg">
-      <img src="alex-chen-kokomi-genshin-impact-digital-illustration.jpg">
-    </main>
-  </div>
-
-  <footer class="main-footer">
-    <div class="container">
-      <div class="About">
-        
-        <p>Alex Chen is a freelance Illustrator and Designer based in Vancouver, British Columbia.</p>
-        <p> Brimming with curiosity and a love for painting, you can always expect to see him working on a brand new project to satisfy his drawing mind.</p>
-        <br>
-        <h2>Work</h2>
-        <br>
-        <li> Freelance Illustration (2018 - Current)</li>
-        <li> Project CERIS Illustration (2018)</li>
-        <li> Fanzine Illustrations (2019-2021)</li>
-        <li> Virtual Avatar Illustration Internship (2021)</li>
-      </div>
-      <div class="side-nav"> <ul>
-        <img class="footer-img" src="alex-chen-portrait-photo.jpg" alt="">
-      </ul></div>
-      <div class="footer-credit">
-        <br>
-        <br>
-        <p><a href="#top">Smooth scroll to the top</a></p>
-        <p>&copy; 2021. Made with ❤ and CSS Grid.</p> </div>
-      </div>
-      
-
+      <p>Genshin Impact is an action role-playing game developed and published by Chinese video game development and animation studio miHoYo. The following paintings listed here are personal studies conducted using characters from Genshin Impact as a fun exercise </p>
     </div>
 
-  </footer>
+    <div class="project-details">
+      <img src="alex-chen-ganyu-genshin-impact-digital-illustration.jpg">
+      <p> Cheese on toast airedale the big cheese. Danish fontina cheesy grin airedale danish fontina taleggio the big cheese macaroni cheese port-salut. Edam fromage lancashire feta caerphilly everyone loves chalk and cheese brie. Red leicester parmesan cheese and biscuits cheesy feet blue castello cheesecake fromage frais smelly cheese.</p>
+      <img src="alex-chen-kokomi-genshin-impact-digital-illustration.jpg">
+    </div>
+    
+  </div>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-credit">
+      <p><a href="#top">Smooth scroll to the top</a></p>
+      <p>&copy; 2021. Made with ❤ and CSS Grid.</p> 
+    </div>
+
+</footer>
+
 
 
 </body>
