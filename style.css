@@ -42,17 +42,14 @@ img {
 h1 {
   font-size: 6em;
   font-family: var(--main-heading);
-  margin-bottom: .2em;
+  margin-bottom: .5em;
+  line-height: 100%;
 }
 
 h2 {
   font-size: 3em;
   font-family: var(--main-heading);
   margin-bottom: .2em;
-}
-
-.hero-headline {
-color: white;
 }
 
 /* Hyperlink Styles */
@@ -64,7 +61,13 @@ a:hover {
   color: #111;
 }
 
-p {margin-bottom: 1em;}
+p {
+  margin: auto;
+  max-width: 70%;
+  line-height: 135%;
+  font-size: 18px;
+  padding-bottom: 2em;
+}
 
 
 
@@ -101,12 +104,7 @@ p {margin-bottom: 1em;}
 }
 
 .main-footer {
-  min-height: 75vh;
-  background: #f5f5f5;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 1rem;
+  padding: 3em 3em 3em 3em;
   text-align: center;
 }
 
@@ -118,11 +116,17 @@ p {margin-bottom: 1em;}
 }
 
 .topnav a {
-  float: right;
-  display: grid;
+  float: left;
+  display: flex;
+  text-align: center;
   color: #000000;
-  padding: 3em 2em 3em 3em;
   font-size: 18px;
+  text-decoration: none;
+  padding: 3em;
+}
+
+.topnav i {
+  font-size: 25px;
 }
 
 .topnav a:hover {
@@ -131,24 +135,52 @@ p {margin-bottom: 1em;}
 }
 
 .topnav a.active {
-  background-color: rgb(92, 92, 92);
+  background-color: rgb(148, 148, 148);
   color: white;
 }
 
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 1150px) {
+  .topnav a:not(:first-child) {display: none; align-items: right;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .topnav.responsive {position: right; align-items:flex-start;}
+  .topnav.responsive .icon {
+    position: right;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display:flex;
+    text-align: right;
+  }
+}
+
 .branding-navigation {
-  display: flex;
-  flex-direction: row;
-  padding: 1em;
-  align-items: center;
-  
+  display:flex;
+}
+
+.branding-navigation h1 {
+  justify-content: left;
+  padding: 0.25em ;
 }
 
 .menu{
   justify-content: right;
 }
 .logo {
-  width: 9em;
-  padding-left: 3em;
+  width: 5em;
+  padding: 0;
+  display: flex;
 }
 
 .footer-navigation {
@@ -163,61 +195,86 @@ p {margin-bottom: 1em;}
 /* Project Page */
 
 .project-wrapper {
-  display: flex;
-  justify-content: space-between;
   background: #ffffff;
-  padding: 1em;
+  align-content: center;
 }
 
 .project-aside {
-  width: 35vw;
-  height: 50%;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 5vh;
-
-  padding: 1em;
+  margin: auto;
+  max-width: 80vw;
+  line-height: 125%;
+  text-align: center;
 }
 
 .project-navigation {
+  margin: auto;
+  max-width: 40%;
   display: flex;
   flex-direction: row;
 }
 
 .arrow {
-  padding-right: 1em;
+  margin: auto;
+  padding: 0 0 4em 0;
+  height: auto;
 }
 
 .project-details {
-  width: 60vw;
-  min-height: 100vh;
-  background: #e3e3e3;
-  padding: 1em;
+  max-width: 80vw;
+  margin: auto;
 }
+
+.project-details img {
+padding: 1em;
+}
+
+.project-details p {
+  padding: 1em 0 2em;
+  text-align: center;
+  line-height: 150%;
+  
+  }
 
 /* Footer */ 
 .container {
-  background-color: #FF992D;
-  text-align: left;
-  line-height: 150%;
   display: grid;
-  grid-template-columns: 1fr 1.2fr 1fr;
-  grid-template-rows: 0.9fr 0.8fr 1.3fr;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr 1.1fr 1.1fr 1fr;
+  grid-template-rows: 0.8fr 0.8fr 1.4fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    ". . ."
-    "side-nav About About"
-    "footer-credit footer-credit footer-credit";
+    "portrait-image biography biography biography"
+    "work-history work-history work-history work-history"
+    ". . . ."
+    ". . . .";
 }
 
-.About { grid-area: About; }
+.portrait-image { 
+  grid-area: portrait-image;
+  padding: 3em;
+ }
 
-.side-nav { grid-area: side-nav; }
+.biography { 
+  grid-area: biography;
+  max-width: 50%;
+  line-height: 125%;
+  padding: 3em;
+ }
+
+.work-history { 
+  grid-area: work-history; 
+  text-align: left;
+  padding: 3em;
+  line-height: 150%;
+}
+
 
 .footer-credit { 
-  grid-area: footer-credit;
+grid-area: footer-credit;
 text-align: center; 
+max-width: 100%;
+margin: auto;
 }
 
 
@@ -229,7 +286,6 @@ html, body , .container {
 
 .footer-img{
   max-height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+padding: 2em;
+  display: inline-block;
 }
