@@ -40,7 +40,8 @@ img {
 /* Typography */
 
 h1 {
-  font-size: 6em;
+  display: flex;
+  font-size: 5em;
   font-family: var(--main-heading);
   margin-bottom: .5em;
   line-height: 100%;
@@ -144,15 +145,15 @@ p {
 }
 
 @media screen and (max-width: 1150px) {
-  .topnav a:not(:first-child) {display: none; align-items: right;}
+  .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
-    float: right;
-    display: block;
+    float: none;
+    display: inline-block;
   }
 }
 
 @media screen and (max-width: 1150px) {
-  .topnav.responsive {position: right; align-items:flex-start;}
+  .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: right;
     right: 0;
@@ -160,8 +161,8 @@ p {
   }
   .topnav.responsive a {
     float: none;
-    display:flex;
-    text-align: right;
+    display:block;
+    text-align: left;
   }
 }
 
