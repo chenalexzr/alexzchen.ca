@@ -5,12 +5,19 @@
 
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;  
+  scroll-behavior: smooth;
 }
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+html,
+body,
+.container {
+  height: 100%;
 }
 
 /* Styling Variables */
@@ -18,7 +25,7 @@ html {
   --accent-color: #555;
   --body-typeface: "Rubik", sans-serif;
   --main-heading: "Staatliches", cursive;
-  --gradient: linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706);
+
 }
 
 
@@ -57,15 +64,14 @@ a {
   text-decoration: none;
   color: #444;
 }
+
 a:hover {
   color: #111;
 }
 
 p {
-  margin: auto;
-  max-width: 70%;
-  line-height: 135%;
-  font-size: 18px;
+  line-height: 1.35;
+  font-size: 1.2em;
   padding-bottom: 2em;
 }
 
@@ -92,7 +98,8 @@ p {
 
 /* Create four equal columns that sits next to each other */
 .column {
-  -ms-flex: 100%; /* IE10 */
+  -ms-flex: 100%;
+  /* IE10 */
   flex: 100%;
   max-width: 100%;
 }
@@ -144,7 +151,10 @@ p {
 }
 
 @media screen and (max-width: 1150px) {
-  .topnav a:not(:first-child) {display: none;}
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
   .topnav a.icon {
     float: none;
     display: inline-block;
@@ -152,31 +162,36 @@ p {
 }
 
 @media screen and (max-width: 1150px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
+
   .topnav.responsive .icon {
     position: right;
     right: 0;
     top: 0;
   }
+
   .topnav.responsive a {
     float: none;
-    display:block;
+    display: block;
     text-align: left;
   }
 }
 
 .branding-navigation {
-  display:flex;
+  display: flex;
 }
 
 .branding-navigation h1 {
   justify-content: left;
-  padding: 0.25em ;
+  padding: 0.25em;
 }
 
-.menu{
+.menu {
   justify-content: right;
 }
+
 .logo {
   width: 5em;
   padding: 0;
@@ -225,17 +240,17 @@ p {
 }
 
 .project-details img {
-padding: 1em;
+  padding: 1em;
 }
 
 .project-details p {
   padding: 1em 0 2em;
   text-align: center;
   line-height: 150%;
-  
-  }
 
-/* Footer */ 
+}
+
+/* About */
 .container {
   display: grid;
   flex-wrap: wrap;
@@ -245,47 +260,43 @@ padding: 1em;
   grid-auto-flow: row;
   grid-template-areas:
     "portrait-image biography biography biography"
-    "work-history work-history work-history work-history"
+    "portrait-image work-history work-history work-history"
     ". . . ."
     ". . . .";
 }
 
-.portrait-image { 
+.portrait-image {
   grid-area: portrait-image;
   padding: 3em;
- }
+}
 
-.biography { 
+.biography {
   grid-area: biography;
-  max-width: 50%;
   line-height: 125%;
   padding: 3em;
- }
+}
 
-.work-history { 
-  grid-area: work-history; 
+.work-history {
+  grid-area: work-history;
   text-align: left;
   padding: 3em;
   line-height: 150%;
 }
 
 
-.footer-credit { 
-grid-area: footer-credit;
-text-align: center; 
-max-width: 100%;
-margin: auto;
+.footer-credit {
+  grid-area: footer-credit;
+  text-align: center;
+  max-width: 100%;
+  margin: auto;
 }
 
 
 
-html, body , .container {
-  height: 100%;
-  margin: 0;
-}
 
-.footer-img{
+
+.footer-img {
   max-height: 100%;
-padding: 2em;
+  padding: 2em;
   display: inline-block;
 }
