@@ -40,7 +40,6 @@ img {
 /* Typography */
 
 h1 {
-  display: flex;
   font-size: 5em;
   font-family: var(--main-heading);
   margin-bottom: .5em;
