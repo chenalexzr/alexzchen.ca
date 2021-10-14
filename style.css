@@ -5,12 +5,19 @@
 
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;  
+  scroll-behavior: smooth;
 }
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+html,
+body,
+.container {
+  height: 100%;
 }
 
 /* Styling Variables */
@@ -60,6 +67,7 @@ a {
   text-decoration: none;
   color: #444;
 }
+
 a:hover {
   color: #111;
 }
@@ -154,7 +162,10 @@ p {
 }
 
 @media screen and (max-width: 1150px) {
-  .topnav a:not(:first-child) {display: none;}
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
   .topnav a.icon {
     float: none;
     display: inline-block;
@@ -162,31 +173,36 @@ p {
 }
 
 @media screen and (max-width: 1150px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
+
   .topnav.responsive .icon {
     position: right;
     right: 0;
     top: 0;
   }
+
   .topnav.responsive a {
     float: none;
-    display:block;
+    display: block;
     text-align: left;
   }
 }
 
 .branding-navigation {
-  display:flex;
+  display: flex;
 }
 
 .branding-navigation h1 {
   justify-content: left;
-  padding: 0.25em ;
+  padding: 0.25em;
 }
 
-.menu{
+.menu {
   justify-content: right;
 }
+
 .logo {
   width: 5em;
   padding: 0;
@@ -251,12 +267,12 @@ padding: 0.5em;
     ". . . .";
 }
 
-.portrait-image { 
+.portrait-image {
   grid-area: portrait-image;
   padding: 3em;
- }
+}
 
-.biography { 
+.biography {
   grid-area: biography;
   padding: 3em;
   max-width: 80%;
@@ -280,8 +296,9 @@ padding: 0.5em;
   margin: auto;
 }
 
-.footer-img{
+
+.footer-img {
   max-height: 100%;
-padding: 2em;
+  padding: 2em;
   display: inline-block;
 }
