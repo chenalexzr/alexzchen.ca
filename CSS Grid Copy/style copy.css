@@ -201,6 +201,7 @@ p {
 }
 
 .project-aside {
+  margin: auto;
   max-width: 80vw;
   line-height: 125%;
   text-align: center;
@@ -212,14 +213,6 @@ p {
   display: flex;
   flex-direction: row;
 }
-
-.project-aside, .project-details p {
-  padding: 2em 0 3.5em;
-  text-align: center;
-  line-height: 1.5em;
-  max-width: 60vw;
-  margin: auto;
-  }
 
 .arrow {
   margin: auto;
@@ -233,8 +226,15 @@ p {
 }
 
 .project-details img {
-padding: 0.5em;
+padding: 1em;
 }
+
+.project-details p {
+  padding: 1em 0 2em;
+  text-align: center;
+  line-height: 150%;
+  
+  }
 
 /* About */ 
 .container {
