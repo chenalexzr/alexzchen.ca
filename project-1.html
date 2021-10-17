@@ -12,38 +12,16 @@
 </head>
 
 <section>
-  <header class="hero-header">
-    <!---Top Navigation-->  
-    <div class="branding-navigation"> 
-      <a href="index.html"><h1 style>ALEX CHEN</h1></a>
-      <div style="justify-content: right;">
-        <div class="topnav" id="myTopnav"> 
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          <a href="about.html">About</a>
-          <a href="index.html">Work</a>
-          <a href="https://twitter.com/natttsume"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.behance.net/alexchen21"><i class="fab fa-behance-square"></i></a>
-          <a href="https://www.instagram.com/natttsume/"><i class="fab fa-instagram"></i></a>
-          </a>
-        </div>
-    </div>
-    </div>
-    </div>
-
+  <header class="header">
+    <a href="index.html" class="logo"><h1>ALEX CHEN</h1></a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a href="index.html">Works</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
   </header>
-
-  <script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-    </script>
-</section>
+  </section>
 
 <body>
 

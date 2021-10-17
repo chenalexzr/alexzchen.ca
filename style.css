@@ -27,7 +27,9 @@ body,
   --main-heading: "Staatliches", cursive;
 }
 
-html, body , .container {
+html,
+body,
+.container {
   height: 100%;
   margin: 0;
 }
@@ -50,9 +52,8 @@ img {
 /* Typography */
 
 h1 {
-  font-size: 5em;
+  font-size: 4em;
   font-family: var(--main-heading);
-  margin-bottom: .5em;
   line-height: 100%;
 }
 
@@ -82,132 +83,222 @@ p {
 
 /* Work Page Layout */
 
-.work-wrapper {
-  flex: 1;
+
+
+/* Masonry grid */
+
+.wrapper {
+  margin: auto;
+  margin-top: 2em;
+  padding: 1em;
+  max-width: 95vw;
 }
 
-.portfolio {
-  padding: 1rem;
+.masonry {
+  transition: all .5s ease-in-out;
+  column-gap: 0.75em;
+  column-fill: initial;
 }
 
-/* Defining the work page grid */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 1em;
+.overlay {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-/* Percentage affects columns */
-.column {
-  flex: 33%;
-  max-width: 100%;
-  padding: 0.25em;
+.text {
+  color: white;
+  font-size: 1.5em;
 }
 
-.column img {
-  padding-top: .25em;
-  vertical-align: middle;
+/* Masonry item */
+.masonry .brick {
+  position: relative;
+  margin-bottom: 0.75em;
+  display: inline-flex; /* Fix the misalignment of items */
+  vertical-align: top; /* Keep the item on the very top */
+  background-color: #000000;
+}
+
+/* Masonry image effects */
+.masonry .brick img {
+  transition: all .5s ease-in-out;
+  backface-visibility: hidden; /* Remove Image flickering on hover */
+}
+
+.masonry .brick:hover img {
+  opacity: .2;
+}
+
+.masonry .brick:hover .overlay {
+  opacity: 1;
+  
+}
+
+/* Masonry on tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+/* Masonry on big screens */
+@media only screen and (min-width: 1024px) {
+  .desc {
+    font-size: 1.25em;
+  }
+
+  .intro {
+    letter-spacing: 1px;
+  }
+
+  .masonry {
+    column-count: 3;
+  }
+}
+
+/* Navigation 2 */
+
+
+/* header */
+
+.header {
+  background-color: #fff;
+  box-shadow: 1px 1px 6px 0 rgba(0,0,0,0);
+  position: relative;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  padding: 0.5em;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li {
+  padding: 1.5em;
+}
+
+
+.header li a {
+  display: block;
+  text-decoration: none;
+  padding: 0.5em;
+}
+
+
+.header .logo {
+  display: block;
+  float: left;
+  padding: 1.5em;
+  text-decoration: none;
+}
+
+.header li:hover{
+  background-color: rgb(206, 206, 206);
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: .2s ease-out;
+  width: 18px;
+  margin: 1.25em;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
   width: 100%;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 100%;
-  }
+.header .menu-icon .navicon:before {
+  top: 5px;
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
+.header .menu-icon .navicon:after {
+  top: -5px;
 }
 
-/* Navigation */
+/* menu btn */
 
-.topnav {
-  overflow: hidden;
-  background-color: #ffffff;
-}
-
-.topnav a {
-  float: left;
-  display: flex;
-  text-align: center;
-  color: #000000;
-  font-size: 18px;
-  text-decoration: none;
-  padding: 3em;
-}
-
-.topnav i {
-  font-size: 25px;
-}
-
-.topnav a:hover {
-  background-color: rgb(190, 190, 190);
-  color: black;
-}
-
-.topnav a.active {
-  background-color: rgb(148, 148, 148);
-  color: white;
-}
-
-.topnav .icon {
+.header .menu-btn {
   display: none;
 }
 
-@media screen and (max-width: 1150px) {
-  .topnav a:not(:first-child) {
+.header .menu-btn:checked ~ .menu {
+  max-height: 500px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 1000px) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 1em;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
     display: none;
   }
-
-  .topnav a.icon {
-    float: none;
-    display: inline-block;
-  }
 }
 
-@media screen and (max-width: 1150px) {
-  .topnav.responsive {
-    position: relative;
-  }
-
-  .topnav.responsive .icon {
-    position: right;
-    right: 0;
-    top: 0;
-  }
-
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-
-.branding-navigation {
-  display: flex;
-}
-
-.branding-navigation h1 {
-  justify-content: left;
-  padding: 0.25em;
-}
-
-.menu {
-  justify-content: right;
-}
-
-.logo {
-  width: 5em;
-  padding: 0;
-  display: flex;
-}
 
 /* Project Page */
 
@@ -229,13 +320,14 @@ p {
   flex-direction: row;
 }
 
-.project-aside, .project-details p {
+.project-aside,
+.project-details p {
   padding: 2em 0 3.5em;
   text-align: center;
   line-height: 1.5em;
   max-width: 60vw;
   margin: auto;
-  }
+}
 
 .arrow {
   margin: auto;
@@ -249,10 +341,10 @@ p {
 }
 
 .project-details img {
-padding: 0.5em;
+  padding: 0.5em;
 }
 
-/* About */ 
+/* About */
 .container {
   display: grid;
   flex-wrap: wrap;
@@ -276,14 +368,14 @@ padding: 0.5em;
   grid-area: biography;
   padding: 3em;
   max-width: 80%;
- }
+}
 
-.work-history { 
-  grid-area: work-history; 
+.work-history {
+  grid-area: work-history;
   padding: 3em;
 }
 
-.work-history li { 
+.work-history li {
   line-height: 1.4em;
   font-size: 1em;
 }
