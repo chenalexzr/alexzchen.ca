@@ -42,17 +42,10 @@ body {
   min-height: 100vh;
 }
 
-
-/* Making all images responsive */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 /* Typography */
 
 h1 {
-  font-size: 4em;
+  font-size: 3em;
   font-family: var(--main-heading);
   line-height: 100%;
 }
@@ -63,35 +56,132 @@ h2 {
   margin-bottom: .2em;
 }
 
+h3 {
+  font-size: 1.75em;
+  font-family: var(--main-heading);
+  margin-bottom: 1em;
+  color: rgb(139, 139, 139);
+}
+
+p {
+  line-height: 1.35em;
+  font-size: 0.9em;
+  padding-bottom: 2em;
+}
+
 /* Hyperlink Styles */
 a {
   text-decoration: none;
-  color: #444;
 }
 
 a:hover {
   color: #111;
 }
 
-p {
-  line-height: 1.35em;
-  font-size: 1em;
-  padding-bottom: 2em;
+/* navigation header */
+
+.header {
+  background-color: #fff;
+  box-shadow: 1px 1px 6px 0 rgba(0,0,0,0);
+  position: relative;
+  width: 95%;
+  z-index: 3;
+  margin: auto;
+}
+
+.header .active{
+  color: #000000;
+}
+
+.header ul {
+  padding: 0.5em;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li {
+  padding: 1em;
+  padding-left: 1em;
+  font-size: 1.2em;
+  font-family: var(--main-heading);
+}
+
+.header li a {
+  display: block;
+  text-decoration: none;
+  padding: 0.5em;
+  color: rgb(146, 146, 146);
+}
+
+.header li a:hover {
+  color: #111;
 }
 
 
+.header .logo img {
+  display: block;
+  float: left;
+  padding: 1.5em;
+  text-decoration: none;
+  max-height: 12vh;
+}
 
-/* Work Page Layout */
+
+/* Making all images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 
+/* Text-centering */
+.title,
+.desc,
+.intro {
+  text-align: center;
+}
+
+.title{
+  margin-top: 1em;
+}
+
+/*  filter section */
+
+.intro {
+  margin: 1.75em 0 .75em;
+  border-bottom: 3px double rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.75em;
+}
+
+.intro a:hover {
+  color: #111;
+}
+
+.intro h3 {
+  font-size: 1.2em;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: .25em .75em .75em;
+}
+
+.intro h3 a {
+  font-weight: 400;
+  color: rgb(192, 192, 192);
+}
+
+.intro .active{
+  color: #000000;
+  text-decoration: underline;
+}
 
 /* Masonry grid */
 
 .wrapper {
   margin: auto;
-  margin-top: 2em;
-  padding: 1em;
-  max-width: 95vw;
+  padding: 0.25em;
+  max-width: 90vw;
 }
 
 .masonry {
@@ -113,7 +203,8 @@ p {
 
 .text {
   color: white;
-  font-size: 1.5em;
+  font-size: 1.25em;
+  padding: 0.5em;
 }
 
 /* Masonry item */
@@ -122,21 +213,23 @@ p {
   margin-bottom: 0.75em;
   display: inline-flex; /* Fix the misalignment of items */
   vertical-align: top; /* Keep the item on the very top */
-  background-color: #000000;
 }
 
 /* Masonry image effects */
 .masonry .brick img {
-  transition: all .5s ease-in-out;
+  transition: all .25s ease-in-out;
   backface-visibility: hidden; /* Remove Image flickering on hover */
 }
 
 .masonry .brick:hover img {
-  opacity: .2;
+  webkit-filter: blur(8px); /* Chrome, Safari, Opera */
+  filter: blur(8px) grayscale(100%);
+  
 }
 
 .masonry .brick:hover .overlay {
   opacity: 1;
+  background-color: rgba(0,0,0,0.8);
   
 }
 
@@ -165,45 +258,6 @@ p {
 /* Navigation 2 */
 
 
-/* header */
-
-.header {
-  background-color: #fff;
-  box-shadow: 1px 1px 6px 0 rgba(0,0,0,0);
-  position: relative;
-  width: 100%;
-  z-index: 3;
-}
-
-.header ul {
-  padding: 0.5em;
-  list-style: none;
-  overflow: hidden;
-  background-color: #fff;
-}
-
-.header li {
-  padding: 1.5em;
-}
-
-
-.header li a {
-  display: block;
-  text-decoration: none;
-  padding: 0.5em;
-}
-
-
-.header .logo {
-  display: block;
-  float: left;
-  padding: 1.5em;
-  text-decoration: none;
-}
-
-.header li:hover{
-  background-color: rgb(206, 206, 206);
-}
 
 /* menu */
 
@@ -346,28 +400,35 @@ p {
 
 /* About */
 .container {
+  margin-top: 4em;
   display: grid;
-  flex-wrap: wrap;
-  grid-template-columns: 1fr 1.1fr 1.1fr 1fr;
-  grid-template-rows: 0.8fr 0.8fr 1.4fr 1fr;
+  flex-wrap:wrap;
+  grid-template-columns: 1.1fr 1.1fr 1.1fr 1fr;
+  grid-template-rows: 0.8fr 0.8fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "portrait-image biography biography biography"
-    "portrait-image work-history work-history work-history"
-    ". . . ."
-    ". . . .";
+    "portrait-image work-history work-history work-history";
 }
 
 .portrait-image {
   grid-area: portrait-image;
-  padding: 3em;
+  padding: 0 2em 0 2em ;
+}
+
+.portrait-image img{
+  display: block;
 }
 
 .biography {
   grid-area: biography;
-  padding: 3em;
+  padding: 0 3em;
   max-width: 80%;
+}
+
+.biography p{
+  max-width: 50vw;
 }
 
 .work-history {
@@ -377,20 +438,12 @@ p {
 
 .work-history li {
   line-height: 1.4em;
-  font-size: 1em;
+  font-size: 0.85em;
 }
 
 /* Footer */
 
 .main-footer {
-  padding: 3em;
   text-align: center;
   margin: auto;
-}
-
-
-.footer-img {
-  max-height: 100%;
-  padding: 2em;
-  display: inline-block;
 }
