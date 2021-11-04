@@ -8,18 +8,25 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <script src="https://kit.fontawesome.com/d300c2ea15.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./style.css">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-NY6185H8N6');
+  </script>
 </head>
 
 <body>
 
   <section>
     <header class="header">
-      <a href="" class="logo"><img src="images/personal-brand/alex-chen-personal-brand-digital-logo.svg" alt=""></a>
+      <a href="index.html" class="logo"><img src="images/personal-brand/alex-chen-personal-brand-digital-logo.svg" alt=""></a>
       <input class="menu-btn" type="checkbox" id="menu-btn" />
       <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
       <ul class="menu">
         <li><a href="index.html">Works</a></li>
-        <li><a class="active" href="about.html">About</a></li>
+        <li><a class="active" href="about.html">About/Contact</a></li>
         <li><a href="https://www.behance.net/alexchen21"><i class="fab fa-behance"></i></a></li>
         <li><a href="https://twitter.com/natttsume"><i class="fab fa-twitter-square"></i></a></li>
         <li><a href="https://www.instagram.com/natttsume/"><i class="fab fa-instagram"></i></a></li>
@@ -39,16 +46,22 @@
 
           <div class="biography">
 
-            <h3>If given the chance I'd challenge Da Vinci and Michelangelo to a drawing battle. I mean you only live once, so why not live it to the extreme?</h3>
+            <h3>If given the chance I'd challenge Da Vinci and Michelangelo to a drawing battle. I'd still win even if I were to lose.</h3>
             
-            <p>An Illustrator and Designer born and raised in Vancouver, BC. 
-              I have a wide range of interests from anime, manga, comic books, dramas, music, and video games; 
+              <p>I'm Illustrator and Designer born and raised in Vancouver, BC. Most recently I graduated from Capilano University's IDEA Program in 2022.</p> 
+              <p>With a wide range of interests from anime, manga, comic books, dramas, music, and video games; 
               I'll pretty much love anything that tells a good story and makes the gears in my brain spin.  
               I can also speak 3 languages: Cantonese, English, Japanese, and slowly but surely Korean.</p>
               <p>
-              New technologies always get me excited too, anything that screams efficiency gets me going. 
-              As a result of this I spend my personal time developing my proficiency using a multitude of Adobe products and even miscellanious things like building my own PC from scratch.</p>
-          </div>
+              New technologies always get me excited too, I'm all over things that allow me to be more efficient; 
+              As a result of this I spend my personal time mastering a multitude of the Adobe Suite.  
+              My other interests also include frequently tinkering around with computers and even building my own workstation from scratch.</p>
+          
+              <h4>Feel free to contact me at 
+                <a href="mailto:nattsumeillust@gmail.com?cc= 
+                 &bcc=&subject=&body=">nattsumeillust@gmail.com</a> if you're interested ;)</h4>
+
+            </div>
           
           <div class="work-history">
             <h2>Work</h2>
@@ -69,9 +82,24 @@
       <p><a href="#top">Smooth scroll to the top</a></p>
       <p>&copy; 2021. Made with ❤ and CSS Grid.</p> 
     </div>
-    
-
   </div>
-
 </footer>
+
+<script>
+  function myFunction() {
+    /* Get the text field */
+    var copyText = document.getElementById("email");
+  
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /* For mobile devices */
+  
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText.value);
+    
+    /* Alert the copied text */
+    alert("Copied the text: " + copyText.value);
+  }
+  </script>
+
 </html>
