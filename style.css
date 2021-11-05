@@ -60,7 +60,6 @@ h3 {
   font-size: 1.75em;
   font-family: var(--main-heading);
   margin-bottom: 1em;
-  color: rgb(139, 139, 139);
 }
 
 h4 {
@@ -70,7 +69,7 @@ h4 {
 
 p {
   line-height: 1.35em;
-  font-size: 0.9em;
+  font-size: 1.1em;
   padding-bottom: 2em;
 }
 
@@ -90,7 +89,6 @@ a:hover {
   box-shadow: 1px 1px 6px 0 rgba(0,0,0,0);
   position: relative;
   width: 95%;
-  z-index: 3;
   margin: auto;
 }
 
@@ -108,7 +106,7 @@ a:hover {
 .header li {
   padding: 1em;
   padding-left: 1em;
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-family: var(--main-heading);
 }
 
@@ -169,6 +167,7 @@ img {
   text-transform: uppercase;
   display: inline-block;
   margin: .25em .75em .75em;
+  
 }
 
 .intro h3 a {
@@ -362,13 +361,11 @@ img {
 
 .project-wrapper {
   background: #ffffff;
-  align-content: center;
 }
 
 .project-aside {
   max-width: 80vw;
   line-height: 125%;
-  text-align: center;
 }
 
 .project-navigation {
@@ -395,14 +392,13 @@ img {
 .project-aside,
 .project-details p {
   padding: 2em 0 3.5em;
-  text-align: center;
   line-height: 1.5em;
-  max-width: 60vw;
+  max-width: 55vw;
   margin: auto;
 }
 
 .project-aside h1 {
-  padding: 0.5em 0 1.5em;
+  padding: 0.5em 0 1em;
   text-align: center;
   max-width: 60vw;
   margin: auto;
@@ -410,12 +406,18 @@ img {
 
 .arrow {
   margin: auto;
-  padding: 0 0 4em 0;
+  padding: 0 0 3em 0;
   height: auto;
+  font-size: 1.7em;
+  color: #555;
+}
+.arrow a{
+  text-decoration: none;
+  color: #333;
 }
 
 .project-details {
-  max-width: 80vw;
+  max-width: 70vw;
   margin: auto;
 }
 
@@ -484,11 +486,44 @@ img {
   margin: auto;
 }
 
+.footer-menu{
+height: 3em;
+}
+
+.footer-table{
+  display: table;
+  margin: auto;
+}
+
+ul#horizontal-list{
+	min-width: 70vw;
+	list-style: none;
+	padding-top: 20px;
+}
+
+ul#horizontal-list li{
+	display: inline;
+  font-size: 1.8em;
+  padding: 0 1em 0 1em;
+}
+
+ul#horizontal-list a{
+text-decoration: none;
+color: #333;
+}
+
+
 .footer-credit{
-  padding: 5em 0 3em;
+  padding: 5em 0 5em;
 }
 
 .footer-credit p{
-  font-size: 1.1em;
+  font-size: 1.em;
   font-weight: 100;
+}
+
+.footer-credit h3{
+  font-weight: 100;
+  text-decoration: none;
+  color: #333;
 }
