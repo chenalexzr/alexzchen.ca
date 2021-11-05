@@ -3,6 +3,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap");
 
+
+
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is global  */
+
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -15,10 +21,10 @@ html {
 }
 
 html,
-body,
-.container {
+body {
   height: 100%;
 }
+
 
 /* Styling Variables */
 :root {
@@ -27,12 +33,6 @@ body,
   --main-heading: "Staatliches", cursive;
 }
 
-html,
-body,
-.container {
-  height: 100%;
-  margin: 0;
-}
 
 body {
   font-family: var(--body-typeface);
@@ -86,13 +86,13 @@ a:hover {
 
 .header {
   background-color: #fff;
-  box-shadow: 1px 1px 6px 0 rgba(0,0,0,0);
+  box-shadow: 1px 1px 6px 0 rgba(0, 0, 0, 0);
   position: relative;
   width: 95%;
   margin: auto;
 }
 
-.header .active{
+.header .active {
   color: #000000;
 }
 
@@ -145,8 +145,9 @@ img {
   text-align: center;
 }
 
-.title{
+.title {
   margin-top: 1em;
+  text-transform:
 }
 
 /*  filter section */
@@ -167,7 +168,7 @@ img {
   text-transform: uppercase;
   display: inline-block;
   margin: .25em .75em .75em;
-  
+
 }
 
 .intro h3 a {
@@ -175,7 +176,7 @@ img {
   color: rgb(192, 192, 192);
 }
 
-.intro .active{
+.intro .active {
   color: #000000;
   text-decoration: underline;
 }
@@ -186,6 +187,7 @@ img {
   margin: auto;
   padding: 0.25em;
   max-width: 90vw;
+
 }
 
 .masonry {
@@ -215,26 +217,30 @@ img {
 .masonry .brick {
   position: relative;
   margin-bottom: 0.75em;
-  display: inline-flex; /* Fix the misalignment of items */
-  vertical-align: top; /* Keep the item on the very top */
+  display: inline-flex;
+  /* Fix the misalignment of items */
+  vertical-align: top;
+  /* Keep the item on the very top */
 }
 
 /* Masonry image effects */
 .masonry .brick img {
   transition: all .25s ease-in-out;
-  backface-visibility: hidden; /* Remove Image flickering on hover */
+  backface-visibility: hidden;
+  /* Remove Image flickering on hover */
 }
 
 .masonry .brick:hover img {
-  -webkit-filter-: blur(8px); /* Chrome, Safari, Opera */
+  -webkit-filter-: blur(8px);
+  /* Chrome, Safari, Opera */
   filter: blur(8px) grayscale(100%);
-  
+
 }
 
 .masonry .brick:hover .overlay {
   opacity: 1;
-  background-color: rgba(0,0,0,0.8);
-  
+  background-color: rgba(0, 0, 0, 0.8);
+
 }
 
 /* Masonry on tablets */
@@ -316,24 +322,24 @@ img {
   display: none;
 }
 
-.header .menu-btn:checked ~ .menu {
+.header .menu-btn:checked~.menu {
   max-height: 500px;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon {
+.header .menu-btn:checked~.menu-icon .navicon {
   background: transparent;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon:before {
+.header .menu-btn:checked~.menu-icon .navicon:before {
   transform: rotate(-45deg);
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
+.header .menu-btn:checked~.menu-icon .navicon:after {
   transform: rotate(45deg);
 }
 
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
 
@@ -343,14 +349,17 @@ img {
   .header li {
     float: left;
   }
+
   .header li a {
     padding: 1em;
   }
+
   .header .menu {
     clear: none;
     float: right;
     max-height: none;
   }
+
   .header .menu-icon {
     display: none;
   }
@@ -375,16 +384,17 @@ img {
   flex-direction: row;
 }
 
-.project-gallery-row{
+.project-gallery-row {
   clear: both;
   display: block;
 }
+
 .project-gallery-column {
   display: inline-block;
   max-width: 20%;
   padding: 0.2em;
   object-fit: cover;
-  
+
 }
 
 /* Clearfix (clear floats) */
@@ -411,7 +421,8 @@ img {
   font-size: 1.7em;
   color: #555;
 }
-.arrow a{
+
+.arrow a {
   text-decoration: none;
   color: #333;
 }
@@ -426,52 +437,51 @@ img {
   padding: 0.5em;
 }
 
-/* About */
+/* Mobile About */
 .container {
   margin-top: 4em;
   display: grid;
-  flex-wrap:wrap;
-  grid-template-columns: 1.1fr 1.1fr 1.1fr 1fr;
-  grid-template-rows: 0.8fr 0.8fr;
+  grid-template-columns: 1.1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "portrait-image biography biography biography"
-    "portrait-image work-history work-history work-history";
+    "portrait-image"
+    "biography"
+    "work-history";
 }
 
 .portrait-image {
   grid-area: portrait-image;
-  padding: 0 2em 0 2em ;
+  padding: 2em;
 }
 
-.portrait-image img{
+.portrait-image img {
   display: block;
 }
 
 .biography {
   grid-area: biography;
-  padding: 0 3em;
-  max-width: 80%;
+  padding: 2em;
+  max-width: 100%;
 }
 
-.biography p{
-  max-width: 50vw;
+.biography p {
+  max-width: 100%;
 }
 
-.biography a{
-  color:rgb(48, 48, 48);
+.biography a {
+  color: rgb(48, 48, 48);
   text-decoration: underline;
 }
 
-.biography h4{
-  color:rgb(139, 139, 139);
+.biography h4 {
+  color: rgb(139, 139, 139);
   padding: 2em 0 2em 0;
 }
 
 .work-history {
   grid-area: work-history;
-  padding: 3em;
+  padding: 2em;
 }
 
 .work-history li {
@@ -482,48 +492,108 @@ img {
 /* Footer */
 
 .main-footer {
-  text-align: center;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 0, 0, 0.3);
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
 }
 
-.footer-menu{
-height: 3em;
+.footer-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.footer-table{
-  display: table;
-  margin: auto;
+.social-icons {
+  display: flex;
+  background: rgb(192, 192, 192);
 }
 
-ul#horizontal-list{
-	min-width: 70vw;
-	list-style: none;
-	padding-top: 20px;
+.social-icon-item {
+  padding: 1rem;
 }
 
-ul#horizontal-list li{
-	display: inline;
-  font-size: 1.8em;
-  padding: 0 1em 0 1em;
+.social-icon-hyperlink {
+  text-decoration: none;
+  color: #333;
 }
 
-ul#horizontal-list a{
-text-decoration: none;
-color: #333;
-}
-
-
-.footer-credit{
-  padding: 5em 0 5em;
-}
-
-.footer-credit p{
-  font-size: 1.em;
+.footer-credit {
+  font-size: 1.0em;
   font-weight: 100;
+  background: yellowgreen;
+  padding-bottom: .275rem;
 }
 
-.footer-credit h3{
+.back-to-top {
   font-weight: 100;
   text-decoration: none;
   color: #333;
+  background: red;
+}
+
+
+
+
+
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  body {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  /* About */
+  .container {
+    margin-top: 4em;
+    display: grid;
+    grid-template-columns: 1.1fr 1.1fr 1.1fr 1fr;
+    grid-template-rows: 0.8fr 0.8fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "portrait-image biography biography biography"
+      "portrait-image work-history work-history work-history";
+  }
+
+  .portrait-image {
+    grid-area: portrait-image;
+    padding: 0 2em 0 2em;
+  }
+
+  .portrait-image img {
+    display: block;
+  }
+
+  .biography {
+    grid-area: biography;
+    padding: 0 3em;
+    max-width: 80%;
+  }
+
+  .biography p {
+    max-width: 50vw;
+  }
+
+  .biography a {
+    color: rgb(48, 48, 48);
+    text-decoration: underline;
+  }
+
+  .biography h4 {
+    color: rgb(139, 139, 139);
+    padding: 2em 0 2em 0;
+  }
+
+  .work-history {
+    grid-area: work-history;
+    padding: 3em;
+  }
+
+  .work-history li {
+    line-height: 1.4em;
+    font-size: 0.85em;
+  }
 }
