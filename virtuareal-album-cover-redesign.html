@@ -8,16 +8,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <script src="https://kit.fontawesome.com/d300c2ea15.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./style.css">
-  <script>
-    window.dataLayer = window.dataLayer || [];
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NY6185H8N6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-NY6185H8N6');
-  </script>
+  gtag('config', 'G-NY6185H8N6');
+</script>
 </head>
 
 <section>
@@ -40,10 +39,6 @@
 
   <div class="project-wrapper">
     <div class="project-aside">
-      <div class="project-navigation">
-        <div class="arrow"><a href="#"><i class="fas fa-arrow-left"></i></a></div>
-        <div class="arrow"><a href="#"><i class="fas fa-arrow-right"></i></a></div>
-      </div>
       <h1>VirtuaREAL Album Redesign</h1>
       <p>
         The VirtuaREAL Project created by ©USAGI Production is a music album series focused on collaborating with
@@ -89,22 +84,21 @@
 
   <!-- Footer -->
   <footer class="main-footer">
-    <div class="footer-credit">
+    <div class="footer-copy">
       <h3><a href="#top" class="back-to-top">Back to top</a></h3>
-      <p>&copy; 2021 Alex Chen, Nattsume.</p>
-      <div class="footer-menu">
-        <div class="footer-table">
-          <ul id="horizontal-list">
-            <li><a href="https://www.behance.net/alexchen21"><i class="fab fa-behance"></i></a></li>
-            <li><a href="https://twitter.com/natttsume"><i class="fab fa-twitter-square"></i></a></li>
-            <li><a href="https://www.instagram.com/natttsume/"><i class="fab fa-instagram"></i></a></li>
-          </ul>
-        </div>
-      </div>
-
+      <p class="footer-credit">&copy; 2021 Alex Chen, Nattsume.</p>
     </div>
+    <ul class="social-icons">
+      <li class="social-icon-item"><a href="https://www.behance.net/alexchen21" class="social-icon-hyperlink"><i
+            class="fab fa-behance"></i></a>
+      </li>
+      <li class="social-icon-item"><a href="https://twitter.com/natttsume" class="social-icon-hyperlink"><i
+            class="fab fa-twitter-square"></i></a></li>
+      <li class="social-icon-item"><a href="https://www.instagram.com/natttsume/" class="social-icon-hyperlink"><i
+            class="fab fa-instagram"></i></a></li>
+    </ul>
   </footer>
-
+  
 </body>
 
 </html>

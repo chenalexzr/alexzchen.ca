@@ -69,7 +69,7 @@ h4 {
 
 p {
   line-height: 1.35em;
-  font-size: 1.1em;
+  font-size: 1em;
   padding-bottom: 2em;
 }
 
@@ -147,7 +147,7 @@ img {
 
 .title {
   margin-top: 1em;
-  text-transform:
+  text-transform:capitalize;
 }
 
 /*  filter section */
@@ -163,11 +163,11 @@ img {
 }
 
 .intro h3 {
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: 500;
   text-transform: uppercase;
   display: inline-block;
-  margin: .25em .75em .75em;
+  padding: 1em 0.5em 0.5em 0.5em;
 
 }
 
@@ -207,9 +207,9 @@ img {
   text-align: center;
 }
 
-.text {
+.thumbnail-text {
   color: white;
-  font-size: 1.25em;
+  font-size: 1.5em;
   padding: 0.5em;
 }
 
@@ -225,22 +225,21 @@ img {
 
 /* Masonry image effects */
 .masonry .brick img {
-  transition: all .25s ease-in-out;
+  transition: all .15s ease-in-out;
   backface-visibility: hidden;
   /* Remove Image flickering on hover */
 }
 
 .masonry .brick:hover img {
-  -webkit-filter-: blur(8px);
+  -webkit-filter-: blur(4px);
   /* Chrome, Safari, Opera */
-  filter: blur(8px) grayscale(100%);
+  filter: blur(4px) grayscale(100%);
 
 }
 
 .masonry .brick:hover .overlay {
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.8);
-
 }
 
 /* Masonry on tablets */
@@ -394,7 +393,29 @@ img {
   max-width: 20%;
   padding: 0.2em;
   object-fit: cover;
+}
 
+.video-container{
+  position: relative; 
+  padding-bottom: 56.25%; 
+  padding-top: 2em; 
+  height: 0; 
+  overflow: hidden;
+}
+/* Mentorship Project Page*/
+
+.mentor-credentials{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mentor-hyperlinks{
+  display: flex;
+}
+
+.mentor-hyperlinks-item{
+  padding: 0 1.5em 2em 1.5em;
 }
 
 /* Clearfix (clear floats) */
@@ -403,7 +424,7 @@ img {
 .project-details p {
   padding: 2em 0 3.5em;
   line-height: 1.5em;
-  max-width: 55vw;
+  max-width: 60vw;
   margin: auto;
 }
 
@@ -428,7 +449,11 @@ img {
 }
 
 .project-details {
-  max-width: 70vw;
+  max-width: 85vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: auto;
 }
 
@@ -453,6 +478,7 @@ img {
 .portrait-image {
   grid-area: portrait-image;
   padding: 2em;
+  max-width: 50vw;
 }
 
 .portrait-image img {
@@ -486,7 +512,7 @@ img {
 
 .work-history li {
   line-height: 1.4em;
-  font-size: 0.85em;
+  font-size: 1em;
 }
 
 /* Footer */
@@ -494,7 +520,6 @@ img {
 .main-footer {
   display: flex;
   flex-direction: column;
-  background: rgba(255, 0, 0, 0.3);
   align-items: center;
   justify-content: center;
   min-height: 40vh;
@@ -508,11 +533,12 @@ img {
 
 .social-icons {
   display: flex;
-  background: rgb(192, 192, 192);
 }
 
 .social-icon-item {
-  padding: 1rem;
+  padding: 1em;
+  font-size: 1.7em;
+
 }
 
 .social-icon-hyperlink {
@@ -521,29 +547,19 @@ img {
 }
 
 .footer-credit {
-  font-size: 1.0em;
-  font-weight: 100;
-  background: yellowgreen;
-  padding-bottom: .275rem;
+  font-size: 1em;
+  padding-top: 2em;
+  padding-bottom: .5rem;
 }
 
 .back-to-top {
   font-weight: 100;
   text-decoration: none;
   color: #333;
-  background: red;
 }
-
-
-
-
-
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  body {
-    background: rgba(0, 0, 0, 0.05);
-  }
 
   /* About */
   .container {
@@ -560,7 +576,7 @@ img {
 
   .portrait-image {
     grid-area: portrait-image;
-    padding: 0 2em 0 2em;
+    padding: 2em
   }
 
   .portrait-image img {
@@ -569,7 +585,7 @@ img {
 
   .biography {
     grid-area: biography;
-    padding: 0 3em;
+    padding: 2em;
     max-width: 80%;
   }
 
@@ -589,11 +605,11 @@ img {
 
   .work-history {
     grid-area: work-history;
-    padding: 3em;
+    padding: 2em;
   }
 
   .work-history li {
     line-height: 1.4em;
-    font-size: 0.85em;
+    font-size: 1.1em;
   }
 }
